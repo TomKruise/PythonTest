@@ -1,4 +1,4 @@
-# encode:utf-8
+# coding:utf-8
 from urllib import request
 from urllib import parse
 from urllib.request import urlopen
