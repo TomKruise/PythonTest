@@ -1,0 +1,918 @@
+2018-09-21 15:45:51 [scrapy.utils.log] INFO: Scrapy 1.5.1 started (bot: Sun0769)
+2018-09-21 15:45:51 [scrapy.utils.log] INFO: Versions: lxml 4.2.5.0, libxml2 2.9.8, cssselect 1.0.3, parsel 1.5.0, w3lib 1.19.0, Twisted 18.7.0, Python 3.6.3 (default, Oct  6 2017, 00:00:00) - [GCC 4.8.4], pyOpenSSL 18.0.0 (OpenSSL 1.1.0i  14 Aug 2018), cryptography 2.3.1, Platform Linux-4.4.0-134-generic-x86_64-with-Ubuntu-14.04-trusty
+2018-09-21 15:45:51 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'Sun0769', 'DOWNLOAD_DELAY': 3, 'LOG_FILE': 'dg.log', 'NEWSPIDER_MODULE': 'Sun0769.spiders', 'SPIDER_MODULES': ['Sun0769.spiders'], 'USER_AGENT': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36'}
+2018-09-21 15:45:51 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats']
+2018-09-21 15:45:52 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2018-09-21 15:45:52 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2018-09-21 15:45:52 [scrapy.middleware] INFO: Enabled item pipelines:
+['Sun0769.pipelines.Sun0769Pipeline']
+2018-09-21 15:45:52 [scrapy.core.engine] INFO: Spider opened
+2018-09-21 15:45:52 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-09-21 15:45:52 [scrapy.extensions.telnet] DEBUG: Telnet console listening on 127.0.0.1:6025
+2018-09-21 15:45:54 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wz.sun0769.com/index.php/question/questionType?type=4&page=0> (referer: None)
+2018-09-21 15:45:54 [scrapy.core.scraper] ERROR: Spider error processing <GET http://wz.sun0769.com/index.php/question/questionType?type=4&page=0> (referer: None)
+Traceback (most recent call last):
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/tom/Desktop/Test/Tryout/Scrapy/Sun0769/Sun0769/spiders/sunSpider.py", line 22, in parse
+    if offset < 900:
+UnboundLocalError: local variable 'offset' referenced before assignment
+2018-09-21 15:45:55 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wz.sun0769.com/html/question/201809/386671.shtml> (referer: http://wz.sun0769.com/index.php/question/questionType?type=4&page=0)
+2018-09-21 15:45:55 [scrapy.core.scraper] ERROR: Spider error processing <GET http://wz.sun0769.com/html/question/201809/386671.shtml> (referer: http://wz.sun0769.com/index.php/question/questionType?type=4&page=0)
+Traceback (most recent call last):
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/tom/Desktop/Test/Tryout/Scrapy/Sun0769/Sun0769/spiders/sunSpider.py", line 36, in parse_item
+    content = response.xpath('//div[@class="c1 text14_2"]/div[@class="contentext"]/text()').extract_first().strip()
+AttributeError: 'NoneType' object has no attribute 'strip'
+2018-09-21 15:45:59 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wz.sun0769.com/html/question/201809/386673.shtml> (referer: http://wz.sun0769.com/index.php/question/questionType?type=4&page=0)
+2018-09-21 15:45:59 [scrapy.core.scraper] DEBUG: Scraped from <200 http://wz.sun0769.com/html/question/201809/386673.shtml>
+{'content': '莞城东纵路怡安村路段（罗沙装饰城公交站【北面】）人行道，长期被车轱辘汽车店、私家车严重侵占，行人无法正常通行！已反馈三次，仍然违法占道停车严重，请交警执法！',
+ 'number': '',
+ 'title': ' 提问：莞城东纵路怡安村人行道被严重侵占！\xa0\xa0编号:197168\xa0\xa0',
+ 'url': 'http://wz.sun0769.com/html/question/201809/386673.shtml'}
+2018-09-21 15:46:03 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wz.sun0769.com/html/question/201809/386674.shtml> (referer: http://wz.sun0769.com/index.php/question/questionType?type=4&page=0)
+2018-09-21 15:46:03 [scrapy.core.scraper] ERROR: Spider error processing <GET http://wz.sun0769.com/html/question/201809/386674.shtml> (referer: http://wz.sun0769.com/index.php/question/questionType?type=4&page=0)
+Traceback (most recent call last):
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/tom/Desktop/Test/Tryout/Scrapy/Sun0769/Sun0769/spiders/sunSpider.py", line 36, in parse_item
+    content = response.xpath('//div[@class="c1 text14_2"]/div[@class="contentext"]/text()').extract_first().strip()
+AttributeError: 'NoneType' object has no attribute 'strip'
+2018-09-21 15:46:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wz.sun0769.com/html/question/201809/386680.shtml> (referer: http://wz.sun0769.com/index.php/question/questionType?type=4&page=0)
+2018-09-21 15:46:06 [scrapy.core.scraper] ERROR: Spider error processing <GET http://wz.sun0769.com/html/question/201809/386680.shtml> (referer: http://wz.sun0769.com/index.php/question/questionType?type=4&page=0)
+Traceback (most recent call last):
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/tom/Desktop/Test/Tryout/Scrapy/Sun0769/Sun0769/spiders/sunSpider.py", line 36, in parse_item
+    content = response.xpath('//div[@class="c1 text14_2"]/div[@class="contentext"]/text()').extract_first().strip()
+AttributeError: 'NoneType' object has no attribute 'strip'
+2018-09-21 15:46:10 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wz.sun0769.com/html/question/201809/386681.shtml> (referer: http://wz.sun0769.com/index.php/question/questionType?type=4&page=0)
+2018-09-21 15:46:10 [scrapy.core.scraper] DEBUG: Scraped from <200 http://wz.sun0769.com/html/question/201809/386681.shtml>
+{'content': '2018年松山湖中心幼儿园有180个名额，为什么松山湖教育局在没有任何官方政策文件情况下，私自保留了80个名额给自己的机关单位，只拿出100个名额来给户籍居民抽签？请问松山湖教育局，是不是机关单位是一等公民，户籍居民是二等公民？保留的学位去向必须公开，给出合理的理由！',
+ 'number': '',
+ 'title': ' 提问：再次投诉\xa0\xa0编号:197174\xa0\xa0',
+ 'url': 'http://wz.sun0769.com/html/question/201809/386681.shtml'}
+2018-09-21 15:46:14 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wz.sun0769.com/html/question/201809/386682.shtml> (referer: http://wz.sun0769.com/index.php/question/questionType?type=4&page=0)
+2018-09-21 15:46:14 [scrapy.core.scraper] ERROR: Spider error processing <GET http://wz.sun0769.com/html/question/201809/386682.shtml> (referer: http://wz.sun0769.com/index.php/question/questionType?type=4&page=0)
+Traceback (most recent call last):
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/tom/Desktop/Test/Tryout/Scrapy/Sun0769/Sun0769/spiders/sunSpider.py", line 36, in parse_item
+    content = response.xpath('//div[@class="c1 text14_2"]/div[@class="contentext"]/text()').extract_first().strip()
+AttributeError: 'NoneType' object has no attribute 'strip'
+2018-09-21 15:46:17 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wz.sun0769.com/html/question/201809/386683.shtml> (referer: http://wz.sun0769.com/index.php/question/questionType?type=4&page=0)
+2018-09-21 15:46:17 [scrapy.core.scraper] ERROR: Spider error processing <GET http://wz.sun0769.com/html/question/201809/386683.shtml> (referer: http://wz.sun0769.com/index.php/question/questionType?type=4&page=0)
+Traceback (most recent call last):
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/tom/Desktop/Test/Tryout/Scrapy/Sun0769/Sun0769/spiders/sunSpider.py", line 36, in parse_item
+    content = response.xpath('//div[@class="c1 text14_2"]/div[@class="contentext"]/text()').extract_first().strip()
+AttributeError: 'NoneType' object has no attribute 'strip'
+2018-09-21 15:46:20 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wz.sun0769.com/html/question/201809/386691.shtml> (referer: http://wz.sun0769.com/index.php/question/questionType?type=4&page=0)
+2018-09-21 15:46:20 [scrapy.core.scraper] DEBUG: Scraped from <200 http://wz.sun0769.com/html/question/201809/386691.shtml>
+{'content': '',
+ 'number': '',
+ 'title': ' 提问：民房建设产生巨大噪音\xa0\xa0编号:197178\xa0\xa0',
+ 'url': 'http://wz.sun0769.com/html/question/201809/386691.shtml'}
+2018-09-21 15:46:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wz.sun0769.com/html/question/201809/386687.shtml> (referer: http://wz.sun0769.com/index.php/question/questionType?type=4&page=0)
+2018-09-21 15:46:22 [scrapy.core.scraper] ERROR: Spider error processing <GET http://wz.sun0769.com/html/question/201809/386687.shtml> (referer: http://wz.sun0769.com/index.php/question/questionType?type=4&page=0)
+Traceback (most recent call last):
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/tom/Desktop/Test/Tryout/Scrapy/Sun0769/Sun0769/spiders/sunSpider.py", line 36, in parse_item
+    content = response.xpath('//div[@class="c1 text14_2"]/div[@class="contentext"]/text()').extract_first().strip()
+AttributeError: 'NoneType' object has no attribute 'strip'
+2018-09-21 15:46:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wz.sun0769.com/html/question/201809/386688.shtml> (referer: http://wz.sun0769.com/index.php/question/questionType?type=4&page=0)
+2018-09-21 15:46:27 [scrapy.core.scraper] ERROR: Spider error processing <GET http://wz.sun0769.com/html/question/201809/386688.shtml> (referer: http://wz.sun0769.com/index.php/question/questionType?type=4&page=0)
+Traceback (most recent call last):
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/tom/Desktop/Test/Tryout/Scrapy/Sun0769/Sun0769/spiders/sunSpider.py", line 36, in parse_item
+    content = response.xpath('//div[@class="c1 text14_2"]/div[@class="contentext"]/text()').extract_first().strip()
+AttributeError: 'NoneType' object has no attribute 'strip'
+2018-09-21 15:46:31 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wz.sun0769.com/html/question/201809/386690.shtml> (referer: http://wz.sun0769.com/index.php/question/questionType?type=4&page=0)
+2018-09-21 15:46:31 [scrapy.core.scraper] ERROR: Spider error processing <GET http://wz.sun0769.com/html/question/201809/386690.shtml> (referer: http://wz.sun0769.com/index.php/question/questionType?type=4&page=0)
+Traceback (most recent call last):
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/tom/Desktop/Test/Tryout/Scrapy/Sun0769/Sun0769/spiders/sunSpider.py", line 36, in parse_item
+    content = response.xpath('//div[@class="c1 text14_2"]/div[@class="contentext"]/text()').extract_first().strip()
+AttributeError: 'NoneType' object has no attribute 'strip'
+2018-09-21 15:46:34 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wz.sun0769.com/html/question/201809/386696.shtml> (referer: http://wz.sun0769.com/index.php/question/questionType?type=4&page=0)
+2018-09-21 15:46:34 [scrapy.core.scraper] ERROR: Spider error processing <GET http://wz.sun0769.com/html/question/201809/386696.shtml> (referer: http://wz.sun0769.com/index.php/question/questionType?type=4&page=0)
+Traceback (most recent call last):
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/tom/Desktop/Test/Tryout/Scrapy/Sun0769/Sun0769/spiders/sunSpider.py", line 36, in parse_item
+    content = response.xpath('//div[@class="c1 text14_2"]/div[@class="contentext"]/text()').extract_first().strip()
+AttributeError: 'NoneType' object has no attribute 'strip'
+2018-09-21 15:46:38 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wz.sun0769.com/html/question/201809/386700.shtml> (referer: http://wz.sun0769.com/index.php/question/questionType?type=4&page=0)
+2018-09-21 15:46:38 [scrapy.core.scraper] DEBUG: Scraped from <200 http://wz.sun0769.com/html/question/201809/386700.shtml>
+{'content': '如图，位于东华高级中学高架桥下方，许多车压实线横跨马路去对面路口，不顾后方车辆，影响车辆行驶，容易酿成车祸！请有关部门在这里摆放石墩。',
+ 'number': '',
+ 'title': ' 提问：这条路经常有车子压实线横跨马路，容易酿成车祸！\xa0\xa0编号:197190\xa0\xa0',
+ 'url': 'http://wz.sun0769.com/html/question/201809/386700.shtml'}
+2018-09-21 15:46:43 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wz.sun0769.com/html/question/201809/386701.shtml> (referer: http://wz.sun0769.com/index.php/question/questionType?type=4&page=0)
+2018-09-21 15:46:43 [scrapy.core.scraper] DEBUG: Scraped from <200 http://wz.sun0769.com/html/question/201809/386701.shtml>
+{'content': '在学院理工学院对面迎华酒楼旁边有一片铁皮棚的违章建筑为什么这多年一直没有 '
+            '拆除，前两天大风还好没有吹掉，如果在有大风吹掉，砸到人怎么办。而且还开家煤气站，如果发生事故怎么办，太 '
+            '危险，出危险谁负责，希望有关部门合力拆除违章建设，给老百姓一个安全生活环境，谢谢。',
+ 'number': '',
+ 'title': ' 提问：危险违章建筑\xa0\xa0编号:197191\xa0\xa0',
+ 'url': 'http://wz.sun0769.com/html/question/201809/386701.shtml'}
+2018-09-21 15:46:46 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wz.sun0769.com/html/question/201809/386703.shtml> (referer: http://wz.sun0769.com/index.php/question/questionType?type=4&page=0)
+2018-09-21 15:46:46 [scrapy.core.scraper] DEBUG: Scraped from <200 http://wz.sun0769.com/html/question/201809/386703.shtml>
+{'content': '这条联检路因施工，已经是千疮百孔了，再加上有很多大货车、平板车把路当停车场。上下班要通过，20多米宽的路，小车都无法走。给我们造成很多不便，请有关部门处理下。',
+ 'number': '',
+ 'title': ' 提问：沙田联检路无路走\xa0\xa0编号:197193\xa0\xa0',
+ 'url': 'http://wz.sun0769.com/html/question/201809/386703.shtml'}
+2018-09-21 15:46:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wz.sun0769.com/html/question/201809/386704.shtml> (referer: http://wz.sun0769.com/index.php/question/questionType?type=4&page=0)
+2018-09-21 15:46:51 [scrapy.core.scraper] ERROR: Spider error processing <GET http://wz.sun0769.com/html/question/201809/386704.shtml> (referer: http://wz.sun0769.com/index.php/question/questionType?type=4&page=0)
+Traceback (most recent call last):
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/tom/Desktop/Test/Tryout/Scrapy/Sun0769/Sun0769/spiders/sunSpider.py", line 36, in parse_item
+    content = response.xpath('//div[@class="c1 text14_2"]/div[@class="contentext"]/text()').extract_first().strip()
+AttributeError: 'NoneType' object has no attribute 'strip'
+2018-09-21 15:46:52 [scrapy.extensions.logstats] INFO: Crawled 17 pages (at 17 pages/min), scraped 6 items (at 6 items/min)
+2018-09-21 15:46:54 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wz.sun0769.com/html/question/201809/386663.shtml> (referer: http://wz.sun0769.com/index.php/question/questionType?type=4&page=0)
+2018-09-21 15:46:54 [scrapy.core.scraper] ERROR: Spider error processing <GET http://wz.sun0769.com/html/question/201809/386663.shtml> (referer: http://wz.sun0769.com/index.php/question/questionType?type=4&page=0)
+Traceback (most recent call last):
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/tom/Desktop/Test/Tryout/Scrapy/Sun0769/Sun0769/spiders/sunSpider.py", line 36, in parse_item
+    content = response.xpath('//div[@class="c1 text14_2"]/div[@class="contentext"]/text()').extract_first().strip()
+AttributeError: 'NoneType' object has no attribute 'strip'
+2018-09-21 15:46:56 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wz.sun0769.com/html/question/201809/386666.shtml> (referer: http://wz.sun0769.com/index.php/question/questionType?type=4&page=0)
+2018-09-21 15:46:56 [scrapy.core.scraper] ERROR: Spider error processing <GET http://wz.sun0769.com/html/question/201809/386666.shtml> (referer: http://wz.sun0769.com/index.php/question/questionType?type=4&page=0)
+Traceback (most recent call last):
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/tom/Desktop/Test/Tryout/Scrapy/Sun0769/Sun0769/spiders/sunSpider.py", line 36, in parse_item
+    content = response.xpath('//div[@class="c1 text14_2"]/div[@class="contentext"]/text()').extract_first().strip()
+AttributeError: 'NoneType' object has no attribute 'strip'
+2018-09-21 15:47:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wz.sun0769.com/html/question/201809/386670.shtml> (referer: http://wz.sun0769.com/index.php/question/questionType?type=4&page=0)
+2018-09-21 15:47:00 [scrapy.core.scraper] ERROR: Spider error processing <GET http://wz.sun0769.com/html/question/201809/386670.shtml> (referer: http://wz.sun0769.com/index.php/question/questionType?type=4&page=0)
+Traceback (most recent call last):
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/tom/Desktop/Test/Tryout/Scrapy/Sun0769/Sun0769/spiders/sunSpider.py", line 36, in parse_item
+    content = response.xpath('//div[@class="c1 text14_2"]/div[@class="contentext"]/text()').extract_first().strip()
+AttributeError: 'NoneType' object has no attribute 'strip'
+2018-09-21 15:47:04 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wz.sun0769.com/html/question/201809/386641.shtml> (referer: http://wz.sun0769.com/index.php/question/questionType?type=4&page=0)
+2018-09-21 15:47:04 [scrapy.core.scraper] ERROR: Spider error processing <GET http://wz.sun0769.com/html/question/201809/386641.shtml> (referer: http://wz.sun0769.com/index.php/question/questionType?type=4&page=0)
+Traceback (most recent call last):
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/tom/Desktop/Test/Tryout/Scrapy/Sun0769/Sun0769/spiders/sunSpider.py", line 36, in parse_item
+    content = response.xpath('//div[@class="c1 text14_2"]/div[@class="contentext"]/text()').extract_first().strip()
+AttributeError: 'NoneType' object has no attribute 'strip'
+2018-09-21 15:47:07 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wz.sun0769.com/html/question/201809/386644.shtml> (referer: http://wz.sun0769.com/index.php/question/questionType?type=4&page=0)
+2018-09-21 15:47:07 [scrapy.core.scraper] ERROR: Spider error processing <GET http://wz.sun0769.com/html/question/201809/386644.shtml> (referer: http://wz.sun0769.com/index.php/question/questionType?type=4&page=0)
+Traceback (most recent call last):
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/tom/Desktop/Test/Tryout/Scrapy/Sun0769/Sun0769/spiders/sunSpider.py", line 36, in parse_item
+    content = response.xpath('//div[@class="c1 text14_2"]/div[@class="contentext"]/text()').extract_first().strip()
+AttributeError: 'NoneType' object has no attribute 'strip'
+2018-09-21 15:47:11 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wz.sun0769.com/html/question/201809/386645.shtml> (referer: http://wz.sun0769.com/index.php/question/questionType?type=4&page=0)
+2018-09-21 15:47:12 [scrapy.core.scraper] DEBUG: Scraped from <200 http://wz.sun0769.com/html/question/201809/386645.shtml>
+{'content': '东莞市候机楼的车票，，现在统一在微信上买的，，某天我从万江候机楼到广州白云机场，，微信清楚地显示是61元（见图），其中没提到任何保险字眼，，上车拿发票时，才发现发票是显示55元还是56元（印刷看不清楚，又被公章盖住），，其中5元还是6元保险费，，请问一下现在的保险是强制要求买的吗？不是的话，，我就投诉候机楼的捆绑销售保险！！如果连候机楼都这样操作的话，，估计东莞市好多客运站都捆绑销售保险，，请相关部门扫除这种捆绑销售保险的恶习！！！',
+ 'number': '',
+ 'title': ' 提问：投诉候机楼捆绑销售保险\xa0\xa0编号:197156\xa0\xa0',
+ 'url': 'http://wz.sun0769.com/html/question/201809/386645.shtml'}
+2018-09-21 15:47:16 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wz.sun0769.com/html/question/201809/386646.shtml> (referer: http://wz.sun0769.com/index.php/question/questionType?type=4&page=0)
+2018-09-21 15:47:16 [scrapy.core.scraper] ERROR: Spider error processing <GET http://wz.sun0769.com/html/question/201809/386646.shtml> (referer: http://wz.sun0769.com/index.php/question/questionType?type=4&page=0)
+Traceback (most recent call last):
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/tom/Desktop/Test/Tryout/Scrapy/Sun0769/Sun0769/spiders/sunSpider.py", line 36, in parse_item
+    content = response.xpath('//div[@class="c1 text14_2"]/div[@class="contentext"]/text()').extract_first().strip()
+AttributeError: 'NoneType' object has no attribute 'strip'
+2018-09-21 15:47:20 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wz.sun0769.com/html/question/201809/386647.shtml> (referer: http://wz.sun0769.com/index.php/question/questionType?type=4&page=0)
+2018-09-21 15:47:20 [scrapy.core.scraper] ERROR: Spider error processing <GET http://wz.sun0769.com/html/question/201809/386647.shtml> (referer: http://wz.sun0769.com/index.php/question/questionType?type=4&page=0)
+Traceback (most recent call last):
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/tom/Desktop/Test/Tryout/Scrapy/Sun0769/Sun0769/spiders/sunSpider.py", line 36, in parse_item
+    content = response.xpath('//div[@class="c1 text14_2"]/div[@class="contentext"]/text()').extract_first().strip()
+AttributeError: 'NoneType' object has no attribute 'strip'
+2018-09-21 15:47:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wz.sun0769.com/html/question/201809/386648.shtml> (referer: http://wz.sun0769.com/index.php/question/questionType?type=4&page=0)
+2018-09-21 15:47:24 [scrapy.core.scraper] DEBUG: Scraped from <200 http://wz.sun0769.com/html/question/201809/386648.shtml>
+{'content': '大岭山南一路抄牌违规。本人昨天停在南一路爱儿新天地门口，并非停在路下面。并没有给交通形成阻碍，竟然被抄牌了。本人表示很不服，对面一样也是同一样停在没有形成交通阻碍的地方为什么就没有被抄牌，我这边就被抄牌了。当时本人见到交警过来抄牌，本人表示立马把车开走，可是交警一副不理的那个态度实在很气。希望领导们能处理处理。',
+ 'number': '',
+ 'title': ' 提问：违规抄牌\xa0\xa0编号:197159\xa0\xa0',
+ 'url': 'http://wz.sun0769.com/html/question/201809/386648.shtml'}
+2018-09-21 15:47:28 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wz.sun0769.com/html/question/201809/386649.shtml> (referer: http://wz.sun0769.com/index.php/question/questionType?type=4&page=0)
+2018-09-21 15:47:28 [scrapy.core.scraper] DEBUG: Scraped from <200 http://wz.sun0769.com/html/question/201809/386649.shtml>
+{'content': '本人于2017-06-11购买保利中惠悦城21栋商铺，未收楼时，有收到销售人员传给我一份商铺差异面积确认书。差异面积3.03%已超过合同规定的差异范围。投诉到保利一直未有效处理。',
+ 'number': '',
+ 'title': ' 提问：购买保利中惠悦城（心语花园）商铺有面积差异\xa0\xa0编号:197160\xa0\xa0',
+ 'url': 'http://wz.sun0769.com/html/question/201809/386649.shtml'}
+2018-09-21 15:47:31 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wz.sun0769.com/html/question/201809/386651.shtml> (referer: http://wz.sun0769.com/index.php/question/questionType?type=4&page=0)
+2018-09-21 15:47:31 [scrapy.core.scraper] ERROR: Spider error processing <GET http://wz.sun0769.com/html/question/201809/386651.shtml> (referer: http://wz.sun0769.com/index.php/question/questionType?type=4&page=0)
+Traceback (most recent call last):
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/tom/Desktop/Test/Tryout/Scrapy/Sun0769/Sun0769/spiders/sunSpider.py", line 36, in parse_item
+    content = response.xpath('//div[@class="c1 text14_2"]/div[@class="contentext"]/text()').extract_first().strip()
+AttributeError: 'NoneType' object has no attribute 'strip'
+2018-09-21 15:47:34 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wz.sun0769.com/html/question/201809/386656.shtml> (referer: http://wz.sun0769.com/index.php/question/questionType?type=4&page=0)
+2018-09-21 15:47:34 [scrapy.core.scraper] DEBUG: Scraped from <200 http://wz.sun0769.com/html/question/201809/386656.shtml>
+{'content': '地址：东莞市樟木头镇康宝街约里克咖啡对面巷子，台风过后，街道积水严重，很多垃圾漂浮之后在街道小巷堆积，无人清理。一堆垃圾在那里，环卫工人就是不清理，本来在图中红圈位置1的地方，第二天把垃圾扫到图中红圈2的位置，我想问一下这些环卫工人，天天拉着个垃圾车，就是不扫到垃圾车拉走，还说要我们自己拉走，请问我们扫去哪里？拉到哪里倒掉。更可恶的是，我们把环卫工人扫到图1的位置后，第二天又扫到图2位置。我问环卫工人你为什么不扫，他说老大要你们自己扫。？？？这个不是建筑垃圾，是台风过后堆积的垃圾，要我们自己扫？我不知道是不是环卫工人想偷懒还是怎么样，总之这样的做法实在太恶心了。天天拉着个垃圾车路过，不但不扫，还把垃圾扫到图2位置，已经2次。坚决投诉！',
+ 'number': '',
+ 'title': ' 提问：台风过后的垃圾无人清理\xa0\xa0编号:197164\xa0\xa0',
+ 'url': 'http://wz.sun0769.com/html/question/201809/386656.shtml'}
+2018-09-21 15:47:38 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wz.sun0769.com/html/question/201809/386706.shtml> (referer: http://wz.sun0769.com/index.php/question/questionType?type=4&page=0)
+2018-09-21 15:47:38 [scrapy.core.scraper] ERROR: Spider error processing <GET http://wz.sun0769.com/html/question/201809/386706.shtml> (referer: http://wz.sun0769.com/index.php/question/questionType?type=4&page=0)
+Traceback (most recent call last):
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/tom/Desktop/Test/Tryout/Scrapy/Sun0769/Sun0769/spiders/sunSpider.py", line 36, in parse_item
+    content = response.xpath('//div[@class="c1 text14_2"]/div[@class="contentext"]/text()').extract_first().strip()
+AttributeError: 'NoneType' object has no attribute 'strip'
+2018-09-21 15:47:42 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wz.sun0769.com/html/question/201809/386707.shtml> (referer: http://wz.sun0769.com/index.php/question/questionType?type=4&page=0)
+2018-09-21 15:47:42 [scrapy.core.scraper] ERROR: Spider error processing <GET http://wz.sun0769.com/html/question/201809/386707.shtml> (referer: http://wz.sun0769.com/index.php/question/questionType?type=4&page=0)
+Traceback (most recent call last):
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/tom/Desktop/Test/Tryout/Scrapy/Sun0769/Sun0769/spiders/sunSpider.py", line 36, in parse_item
+    content = response.xpath('//div[@class="c1 text14_2"]/div[@class="contentext"]/text()').extract_first().strip()
+AttributeError: 'NoneType' object has no attribute 'strip'
+2018-09-21 15:47:42 [scrapy.core.engine] INFO: Closing spider (finished)
+2018-09-21 15:47:42 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 15074,
+ 'downloader/request_count': 31,
+ 'downloader/request_method_count/GET': 31,
+ 'downloader/response_bytes': 269728,
+ 'downloader/response_count': 31,
+ 'downloader/response_status_count/200': 31,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2018, 9, 21, 7, 47, 42, 923525),
+ 'item_scraped_count': 10,
+ 'log_count/DEBUG': 42,
+ 'log_count/ERROR': 21,
+ 'log_count/INFO': 8,
+ 'memusage/max': 55197696,
+ 'memusage/startup': 50892800,
+ 'request_depth_max': 1,
+ 'response_received_count': 31,
+ 'scheduler/dequeued': 31,
+ 'scheduler/dequeued/memory': 31,
+ 'scheduler/enqueued': 31,
+ 'scheduler/enqueued/memory': 31,
+ 'spider_exceptions/AttributeError': 20,
+ 'spider_exceptions/UnboundLocalError': 1,
+ 'start_time': datetime.datetime(2018, 9, 21, 7, 45, 52, 25359)}
+2018-09-21 15:47:42 [scrapy.core.engine] INFO: Spider closed (finished)
+2018-09-23 01:37:01 [scrapy.utils.log] INFO: Scrapy 1.5.1 started (bot: Sun0769)
+2018-09-23 01:37:01 [scrapy.utils.log] INFO: Versions: lxml 4.2.5.0, libxml2 2.9.8, cssselect 1.0.3, parsel 1.5.0, w3lib 1.19.0, Twisted 18.7.0, Python 3.6.3 (default, Oct  6 2017, 00:00:00) - [GCC 4.8.4], pyOpenSSL 18.0.0 (OpenSSL 1.1.0i  14 Aug 2018), cryptography 2.3.1, Platform Linux-4.4.0-134-generic-x86_64-with-Ubuntu-14.04-trusty
+2018-09-23 01:37:01 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'Sun0769', 'DOWNLOAD_DELAY': 3, 'LOG_FILE': 'dg.log', 'NEWSPIDER_MODULE': 'Sun0769.spiders', 'SPIDER_MODULES': ['Sun0769.spiders'], 'USER_AGENT': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36'}
+2018-09-23 01:37:01 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats']
+2018-09-23 01:37:01 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2018-09-23 01:37:01 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2018-09-23 01:37:01 [scrapy.middleware] INFO: Enabled item pipelines:
+['Sun0769.pipelines.Sun0769Pipeline']
+2018-09-23 01:37:01 [scrapy.core.engine] INFO: Spider opened
+2018-09-23 01:37:01 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-09-23 01:37:01 [scrapy.extensions.telnet] DEBUG: Telnet console listening on 127.0.0.1:6025
+2018-09-23 01:37:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wz.sun0769.com/index.php/question/questionType?type=4&page=0> (referer: None)
+2018-09-23 01:37:04 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wz.sun0769.com/index.php/question/questionType?type=4> (referer: http://wz.sun0769.com/index.php/question/questionType?type=4&page=0)
+2018-09-23 01:37:04 [scrapy.dupefilters] DEBUG: Filtered duplicate request: <GET http://wz.sun0769.com/index.php/question/questionType?type=4> - no more duplicates will be shown (see DUPEFILTER_DEBUG to show all duplicates)
+2018-09-23 01:37:08 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wz.sun0769.com/html/question/201809/386810.shtml> (referer: http://wz.sun0769.com/index.php/question/questionType?type=4&page=0)
+2018-09-23 01:37:08 [scrapy.core.scraper] ERROR: Spider error processing <GET http://wz.sun0769.com/html/question/201809/386810.shtml> (referer: http://wz.sun0769.com/index.php/question/questionType?type=4&page=0)
+Traceback (most recent call last):
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spiders/crawl.py", line 78, in _parse_response
+    for requests_or_item in iterate_spider_output(cb_res):
+  File "/home/tom/Desktop/Test/Tryout/Scrapy/Sun0769/Sun0769/spiders/sunCrawlSpider.py", line 38, in parseform
+    content = response.xpath('//div[@class="c1 text14_2"]/div[@class="contentext"]/text()').extract_first().strip()
+AttributeError: 'NoneType' object has no attribute 'strip'
+2018-09-23 01:37:14 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wz.sun0769.com/index.php/question/questionType?type=4&page=97020> (referer: http://wz.sun0769.com/index.php/question/questionType?type=4&page=0)
+2018-09-23 01:37:17 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wz.sun0769.com/index.php/question/questionType?type=4&page=120> (referer: http://wz.sun0769.com/index.php/question/questionType?type=4&page=0)
+2018-09-23 01:37:20 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wz.sun0769.com/index.php/question/questionType?type=4&page=90> (referer: http://wz.sun0769.com/index.php/question/questionType?type=4&page=0)
+2018-09-23 01:37:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wz.sun0769.com/index.php/question/questionType?type=4&page=60> (referer: http://wz.sun0769.com/index.php/question/questionType?type=4&page=0)
+2018-09-23 01:37:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wz.sun0769.com/index.php/question/questionType?type=4&page=30> (referer: http://wz.sun0769.com/index.php/question/questionType?type=4&page=0)
+2018-09-23 01:37:31 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wz.sun0769.com/html/question/201809/386723.shtml> (referer: http://wz.sun0769.com/index.php/question/questionType?type=4&page=0)
+2018-09-23 01:37:31 [scrapy.core.scraper] ERROR: Spider error processing <GET http://wz.sun0769.com/html/question/201809/386723.shtml> (referer: http://wz.sun0769.com/index.php/question/questionType?type=4&page=0)
+Traceback (most recent call last):
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spiders/crawl.py", line 78, in _parse_response
+    for requests_or_item in iterate_spider_output(cb_res):
+  File "/home/tom/Desktop/Test/Tryout/Scrapy/Sun0769/Sun0769/spiders/sunCrawlSpider.py", line 38, in parseform
+    content = response.xpath('//div[@class="c1 text14_2"]/div[@class="contentext"]/text()').extract_first().strip()
+AttributeError: 'NoneType' object has no attribute 'strip'
+2018-09-23 01:37:33 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wz.sun0769.com/html/question/201809/386724.shtml> (referer: http://wz.sun0769.com/index.php/question/questionType?type=4&page=0)
+2018-09-23 01:37:33 [scrapy.core.scraper] ERROR: Spider error processing <GET http://wz.sun0769.com/html/question/201809/386724.shtml> (referer: http://wz.sun0769.com/index.php/question/questionType?type=4&page=0)
+Traceback (most recent call last):
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spiders/crawl.py", line 78, in _parse_response
+    for requests_or_item in iterate_spider_output(cb_res):
+  File "/home/tom/Desktop/Test/Tryout/Scrapy/Sun0769/Sun0769/spiders/sunCrawlSpider.py", line 38, in parseform
+    content = response.xpath('//div[@class="c1 text14_2"]/div[@class="contentext"]/text()').extract_first().strip()
+AttributeError: 'NoneType' object has no attribute 'strip'
+2018-09-23 01:37:35 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wz.sun0769.com/html/question/201809/386736.shtml> (referer: http://wz.sun0769.com/index.php/question/questionType?type=4&page=0)
+2018-09-23 01:37:35 [scrapy.core.scraper] ERROR: Spider error processing <GET http://wz.sun0769.com/html/question/201809/386736.shtml> (referer: http://wz.sun0769.com/index.php/question/questionType?type=4&page=0)
+Traceback (most recent call last):
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spiders/crawl.py", line 78, in _parse_response
+    for requests_or_item in iterate_spider_output(cb_res):
+  File "/home/tom/Desktop/Test/Tryout/Scrapy/Sun0769/Sun0769/spiders/sunCrawlSpider.py", line 38, in parseform
+    content = response.xpath('//div[@class="c1 text14_2"]/div[@class="contentext"]/text()').extract_first().strip()
+AttributeError: 'NoneType' object has no attribute 'strip'
+2018-09-23 01:37:39 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wz.sun0769.com/html/question/201809/386738.shtml> (referer: http://wz.sun0769.com/index.php/question/questionType?type=4&page=0)
+2018-09-23 01:37:39 [scrapy.core.scraper] DEBUG: Scraped from <200 http://wz.sun0769.com/html/question/201809/386738.shtml>
+{'content': '樟木头大道保利红绿灯路口进隧道前行20米左右开了一路口，，请问有没有审批的，有公告出来吗？是不是想开路口就开的，，请问有没有想过人身安全，车又多又危险 '
+            '。',
+ 'number': '',
+ 'title': ' 提问：东莞樟木头樟洋银洋工业区\xa0\xa0编号:197216\xa0\xa0',
+ 'url': 'http://wz.sun0769.com/html/question/201809/386738.shtml'}
+2018-09-23 01:37:42 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wz.sun0769.com/html/question/201809/386739.shtml> (referer: http://wz.sun0769.com/index.php/question/questionType?type=4&page=0)
+2018-09-23 01:37:42 [scrapy.core.scraper] ERROR: Spider error processing <GET http://wz.sun0769.com/html/question/201809/386739.shtml> (referer: http://wz.sun0769.com/index.php/question/questionType?type=4&page=0)
+Traceback (most recent call last):
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spiders/crawl.py", line 78, in _parse_response
+    for requests_or_item in iterate_spider_output(cb_res):
+  File "/home/tom/Desktop/Test/Tryout/Scrapy/Sun0769/Sun0769/spiders/sunCrawlSpider.py", line 38, in parseform
+    content = response.xpath('//div[@class="c1 text14_2"]/div[@class="contentext"]/text()').extract_first().strip()
+AttributeError: 'NoneType' object has no attribute 'strip'
+2018-09-23 01:37:45 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wz.sun0769.com/html/question/201809/386743.shtml> (referer: http://wz.sun0769.com/index.php/question/questionType?type=4&page=0)
+2018-09-23 01:37:46 [scrapy.core.scraper] ERROR: Spider error processing <GET http://wz.sun0769.com/html/question/201809/386743.shtml> (referer: http://wz.sun0769.com/index.php/question/questionType?type=4&page=0)
+Traceback (most recent call last):
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spiders/crawl.py", line 78, in _parse_response
+    for requests_or_item in iterate_spider_output(cb_res):
+  File "/home/tom/Desktop/Test/Tryout/Scrapy/Sun0769/Sun0769/spiders/sunCrawlSpider.py", line 38, in parseform
+    content = response.xpath('//div[@class="c1 text14_2"]/div[@class="contentext"]/text()').extract_first().strip()
+AttributeError: 'NoneType' object has no attribute 'strip'
+2018-09-23 01:37:49 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wz.sun0769.com/html/question/201809/386749.shtml> (referer: http://wz.sun0769.com/index.php/question/questionType?type=4&page=0)
+2018-09-23 01:37:49 [scrapy.core.scraper] ERROR: Spider error processing <GET http://wz.sun0769.com/html/question/201809/386749.shtml> (referer: http://wz.sun0769.com/index.php/question/questionType?type=4&page=0)
+Traceback (most recent call last):
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spiders/crawl.py", line 78, in _parse_response
+    for requests_or_item in iterate_spider_output(cb_res):
+  File "/home/tom/Desktop/Test/Tryout/Scrapy/Sun0769/Sun0769/spiders/sunCrawlSpider.py", line 38, in parseform
+    content = response.xpath('//div[@class="c1 text14_2"]/div[@class="contentext"]/text()').extract_first().strip()
+AttributeError: 'NoneType' object has no attribute 'strip'
+2018-09-23 01:37:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wz.sun0769.com/html/question/201809/386753.shtml> (referer: http://wz.sun0769.com/index.php/question/questionType?type=4&page=0)
+2018-09-23 01:37:52 [scrapy.core.scraper] ERROR: Spider error processing <GET http://wz.sun0769.com/html/question/201809/386753.shtml> (referer: http://wz.sun0769.com/index.php/question/questionType?type=4&page=0)
+Traceback (most recent call last):
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spiders/crawl.py", line 78, in _parse_response
+    for requests_or_item in iterate_spider_output(cb_res):
+  File "/home/tom/Desktop/Test/Tryout/Scrapy/Sun0769/Sun0769/spiders/sunCrawlSpider.py", line 38, in parseform
+    content = response.xpath('//div[@class="c1 text14_2"]/div[@class="contentext"]/text()').extract_first().strip()
+AttributeError: 'NoneType' object has no attribute 'strip'
+2018-09-23 01:37:57 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wz.sun0769.com/html/question/201809/386756.shtml> (referer: http://wz.sun0769.com/index.php/question/questionType?type=4&page=0)
+2018-09-23 01:37:57 [scrapy.core.scraper] ERROR: Spider error processing <GET http://wz.sun0769.com/html/question/201809/386756.shtml> (referer: http://wz.sun0769.com/index.php/question/questionType?type=4&page=0)
+Traceback (most recent call last):
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spiders/crawl.py", line 78, in _parse_response
+    for requests_or_item in iterate_spider_output(cb_res):
+  File "/home/tom/Desktop/Test/Tryout/Scrapy/Sun0769/Sun0769/spiders/sunCrawlSpider.py", line 38, in parseform
+    content = response.xpath('//div[@class="c1 text14_2"]/div[@class="contentext"]/text()').extract_first().strip()
+AttributeError: 'NoneType' object has no attribute 'strip'
+2018-09-23 01:38:01 [scrapy.extensions.logstats] INFO: Crawled 17 pages (at 17 pages/min), scraped 1 items (at 1 items/min)
+2018-09-23 01:38:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wz.sun0769.com/html/question/201809/386718.shtml> (referer: http://wz.sun0769.com/index.php/question/questionType?type=4&page=0)
+2018-09-23 01:38:01 [scrapy.core.scraper] ERROR: Spider error processing <GET http://wz.sun0769.com/html/question/201809/386718.shtml> (referer: http://wz.sun0769.com/index.php/question/questionType?type=4&page=0)
+Traceback (most recent call last):
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spiders/crawl.py", line 78, in _parse_response
+    for requests_or_item in iterate_spider_output(cb_res):
+  File "/home/tom/Desktop/Test/Tryout/Scrapy/Sun0769/Sun0769/spiders/sunCrawlSpider.py", line 38, in parseform
+    content = response.xpath('//div[@class="c1 text14_2"]/div[@class="contentext"]/text()').extract_first().strip()
+AttributeError: 'NoneType' object has no attribute 'strip'
+2018-09-23 01:38:03 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wz.sun0769.com/html/question/201809/386719.shtml> (referer: http://wz.sun0769.com/index.php/question/questionType?type=4&page=0)
+2018-09-23 01:38:03 [scrapy.core.scraper] ERROR: Spider error processing <GET http://wz.sun0769.com/html/question/201809/386719.shtml> (referer: http://wz.sun0769.com/index.php/question/questionType?type=4&page=0)
+Traceback (most recent call last):
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spiders/crawl.py", line 78, in _parse_response
+    for requests_or_item in iterate_spider_output(cb_res):
+  File "/home/tom/Desktop/Test/Tryout/Scrapy/Sun0769/Sun0769/spiders/sunCrawlSpider.py", line 38, in parseform
+    content = response.xpath('//div[@class="c1 text14_2"]/div[@class="contentext"]/text()').extract_first().strip()
+AttributeError: 'NoneType' object has no attribute 'strip'
+2018-09-23 01:38:05 [scrapy.crawler] INFO: Received SIGINT, shutting down gracefully. Send again to force 
+2018-09-23 01:38:05 [scrapy.core.engine] INFO: Closing spider (shutdown)
+2018-09-23 01:38:07 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wz.sun0769.com/html/question/201809/386720.shtml> (referer: http://wz.sun0769.com/index.php/question/questionType?type=4&page=0)
+2018-09-23 01:38:07 [scrapy.crawler] INFO: Received SIGINT twice, forcing unclean shutdown
+2018-09-23 01:38:56 [scrapy.utils.log] INFO: Scrapy 1.5.1 started (bot: Sun0769)
+2018-09-23 01:38:56 [scrapy.utils.log] INFO: Versions: lxml 4.2.5.0, libxml2 2.9.8, cssselect 1.0.3, parsel 1.5.0, w3lib 1.19.0, Twisted 18.7.0, Python 3.6.3 (default, Oct  6 2017, 00:00:00) - [GCC 4.8.4], pyOpenSSL 18.0.0 (OpenSSL 1.1.0i  14 Aug 2018), cryptography 2.3.1, Platform Linux-4.4.0-134-generic-x86_64-with-Ubuntu-14.04-trusty
+2018-09-23 01:38:56 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'Sun0769', 'DOWNLOAD_DELAY': 3, 'LOG_FILE': 'dg.log', 'NEWSPIDER_MODULE': 'Sun0769.spiders', 'SPIDER_MODULES': ['Sun0769.spiders'], 'USER_AGENT': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36'}
+2018-09-23 01:38:56 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats']
+2018-09-23 01:38:56 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2018-09-23 01:38:56 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2018-09-23 01:38:56 [scrapy.middleware] INFO: Enabled item pipelines:
+['Sun0769.pipelines.Sun0769Pipeline']
+2018-09-23 01:38:56 [scrapy.core.engine] INFO: Spider opened
+2018-09-23 01:38:56 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-09-23 01:38:56 [scrapy.extensions.telnet] DEBUG: Telnet console listening on 127.0.0.1:6025
+2018-09-23 01:38:59 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wz.sun0769.com/index.php/question/questionType?type=4&page=0> (referer: None)
+2018-09-23 01:39:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wz.sun0769.com/index.php/question/questionType?type=4> (referer: http://wz.sun0769.com/index.php/question/questionType?type=4&page=0)
+2018-09-23 01:39:00 [scrapy.dupefilters] DEBUG: Filtered duplicate request: <GET http://wz.sun0769.com/index.php/question/questionType?type=4> - no more duplicates will be shown (see DUPEFILTER_DEBUG to show all duplicates)
+2018-09-23 01:39:04 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wz.sun0769.com/html/question/201809/386810.shtml> (referer: http://wz.sun0769.com/index.php/question/questionType?type=4&page=0)
+2018-09-23 01:39:05 [scrapy.core.scraper] ERROR: Spider error processing <GET http://wz.sun0769.com/html/question/201809/386810.shtml> (referer: http://wz.sun0769.com/index.php/question/questionType?type=4&page=0)
+Traceback (most recent call last):
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spiders/crawl.py", line 78, in _parse_response
+    for requests_or_item in iterate_spider_output(cb_res):
+  File "/home/tom/Desktop/Test/Tryout/Scrapy/Sun0769/Sun0769/spiders/sunCrawlSpider.py", line 38, in parseform
+    content = response.xpath('//div[@class="c1 text14_2"]/div[@class="contentext"]/text()').extract_first().strip()
+AttributeError: 'NoneType' object has no attribute 'strip'
+2018-09-23 01:39:10 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wz.sun0769.com/index.php/question/questionType?type=4&page=97020> (referer: http://wz.sun0769.com/index.php/question/questionType?type=4&page=0)
+2018-09-23 01:39:15 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wz.sun0769.com/index.php/question/questionType?type=4&page=120> (referer: http://wz.sun0769.com/index.php/question/questionType?type=4&page=0)
+2018-09-23 01:39:17 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wz.sun0769.com/index.php/question/questionType?type=4&page=90> (referer: http://wz.sun0769.com/index.php/question/questionType?type=4&page=0)
+2018-09-23 01:39:20 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wz.sun0769.com/index.php/question/questionType?type=4&page=60> (referer: http://wz.sun0769.com/index.php/question/questionType?type=4&page=0)
+2018-09-23 01:39:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wz.sun0769.com/index.php/question/questionType?type=4&page=30> (referer: http://wz.sun0769.com/index.php/question/questionType?type=4&page=0)
+2018-09-23 01:39:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wz.sun0769.com/html/question/201809/386753.shtml> (referer: http://wz.sun0769.com/index.php/question/questionType?type=4&page=0)
+2018-09-23 01:39:25 [scrapy.core.scraper] ERROR: Spider error processing <GET http://wz.sun0769.com/html/question/201809/386753.shtml> (referer: http://wz.sun0769.com/index.php/question/questionType?type=4&page=0)
+Traceback (most recent call last):
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spiders/crawl.py", line 78, in _parse_response
+    for requests_or_item in iterate_spider_output(cb_res):
+  File "/home/tom/Desktop/Test/Tryout/Scrapy/Sun0769/Sun0769/spiders/sunCrawlSpider.py", line 38, in parseform
+    content = response.xpath('//div[@class="c1 text14_2"]/div[@class="contentext"]/text()').extract_first().strip()
+AttributeError: 'NoneType' object has no attribute 'strip'
+2018-09-23 01:39:29 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wz.sun0769.com/html/question/201809/386756.shtml> (referer: http://wz.sun0769.com/index.php/question/questionType?type=4&page=0)
+2018-09-23 01:39:29 [scrapy.core.scraper] ERROR: Spider error processing <GET http://wz.sun0769.com/html/question/201809/386756.shtml> (referer: http://wz.sun0769.com/index.php/question/questionType?type=4&page=0)
+Traceback (most recent call last):
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spiders/crawl.py", line 78, in _parse_response
+    for requests_or_item in iterate_spider_output(cb_res):
+  File "/home/tom/Desktop/Test/Tryout/Scrapy/Sun0769/Sun0769/spiders/sunCrawlSpider.py", line 38, in parseform
+    content = response.xpath('//div[@class="c1 text14_2"]/div[@class="contentext"]/text()').extract_first().strip()
+AttributeError: 'NoneType' object has no attribute 'strip'
+2018-09-23 01:39:33 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wz.sun0769.com/html/question/201809/386761.shtml> (referer: http://wz.sun0769.com/index.php/question/questionType?type=4&page=0)
+2018-09-23 01:39:34 [scrapy.core.scraper] DEBUG: Scraped from <200 http://wz.sun0769.com/html/question/201809/386761.shtml>
+{'content': '各位尊敬的领导，您们好。尊敬的相关部门领导，您们好。恳求相关领导、部门对于东莞市塘厦镇诸佛岭大岭古广源街2号（东莞市利巨硅胶制品有限公司）大门左侧的垃圾堆放黑点，做出一个实实在在，实事求是的根治的方案，大岭古处于塘厦较高的地势，廉价的铺租、人口混杂的城中村，必然成了塘厦镇旧货店、批发店的集中地；人口密杂必然会产生较多的生活垃圾等等，但连续几年来，该垃圾“堆放点”（已经用堆放来形容了）一次又一次地得不到整治、根治，每一次总是等到相关部门等到投诉过后，“民声”冷了后，又恢复原来的“脏”样貌，虽然前阵子刚过的创建文明城市风，但那阵子说真的，还是一样，也没看有什么成效，只是应应付而已罢了。可笑的是，相关部门总喜欢玩起了“耍太极”，何谓：从人民群众中来，到人民群众中去。  '
+            '求根治！求根治！ '
+            '对面就一所幼儿园，那些蚊虫、老鼠细菌，对就读的幼儿园学生有着健康的威胁。请求政府相关部门，想一个根治的办法，让咱们老百姓过着平平安安，健健康康的日子。',
+ 'number': '',
+ 'title': ' 提问：塘厦镇大岭古社区垃圾黑点求根治\xa0\xa0编号:197229\xa0\xa0',
+ 'url': 'http://wz.sun0769.com/html/question/201809/386761.shtml'}
+2018-09-23 01:39:38 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wz.sun0769.com/html/question/201809/386764.shtml> (referer: http://wz.sun0769.com/index.php/question/questionType?type=4&page=0)
+2018-09-23 01:39:38 [scrapy.core.scraper] ERROR: Spider error processing <GET http://wz.sun0769.com/html/question/201809/386764.shtml> (referer: http://wz.sun0769.com/index.php/question/questionType?type=4&page=0)
+Traceback (most recent call last):
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spiders/crawl.py", line 78, in _parse_response
+    for requests_or_item in iterate_spider_output(cb_res):
+  File "/home/tom/Desktop/Test/Tryout/Scrapy/Sun0769/Sun0769/spiders/sunCrawlSpider.py", line 38, in parseform
+    content = response.xpath('//div[@class="c1 text14_2"]/div[@class="contentext"]/text()').extract_first().strip()
+AttributeError: 'NoneType' object has no attribute 'strip'
+2018-09-23 01:39:42 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wz.sun0769.com/html/question/201809/386765.shtml> (referer: http://wz.sun0769.com/index.php/question/questionType?type=4&page=0)
+2018-09-23 01:39:42 [scrapy.core.scraper] DEBUG: Scraped from <200 http://wz.sun0769.com/html/question/201809/386765.shtml>
+{'content': '在东莞市东城区桑园工业区狮长路1号处，即东莞市郊工业园综治办门口对路上有一深坑，希望有关部门组织人员填补一下，不然会给路过的车辆造成不便，速度快有可能爆胎，谢谢！！',
+ 'number': '',
+ 'title': ' 提问：东莞东城桑园工业区狮长路1号（市郊工业园综治办门口处）\xa0\xa0编号:197231\xa0\xa0',
+ 'url': 'http://wz.sun0769.com/html/question/201809/386765.shtml'}
+2018-09-23 01:39:46 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wz.sun0769.com/html/question/201809/386767.shtml> (referer: http://wz.sun0769.com/index.php/question/questionType?type=4&page=0)
+2018-09-23 01:39:46 [scrapy.core.scraper] ERROR: Spider error processing <GET http://wz.sun0769.com/html/question/201809/386767.shtml> (referer: http://wz.sun0769.com/index.php/question/questionType?type=4&page=0)
+Traceback (most recent call last):
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spiders/crawl.py", line 78, in _parse_response
+    for requests_or_item in iterate_spider_output(cb_res):
+  File "/home/tom/Desktop/Test/Tryout/Scrapy/Sun0769/Sun0769/spiders/sunCrawlSpider.py", line 38, in parseform
+    content = response.xpath('//div[@class="c1 text14_2"]/div[@class="contentext"]/text()').extract_first().strip()
+AttributeError: 'NoneType' object has no attribute 'strip'
+2018-09-23 01:39:50 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wz.sun0769.com/html/question/201809/386777.shtml> (referer: http://wz.sun0769.com/index.php/question/questionType?type=4&page=0)
+2018-09-23 01:39:50 [scrapy.core.scraper] ERROR: Spider error processing <GET http://wz.sun0769.com/html/question/201809/386777.shtml> (referer: http://wz.sun0769.com/index.php/question/questionType?type=4&page=0)
+Traceback (most recent call last):
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spiders/crawl.py", line 78, in _parse_response
+    for requests_or_item in iterate_spider_output(cb_res):
+  File "/home/tom/Desktop/Test/Tryout/Scrapy/Sun0769/Sun0769/spiders/sunCrawlSpider.py", line 38, in parseform
+    content = response.xpath('//div[@class="c1 text14_2"]/div[@class="contentext"]/text()').extract_first().strip()
+AttributeError: 'NoneType' object has no attribute 'strip'
+2018-09-23 01:39:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wz.sun0769.com/html/question/201809/386779.shtml> (referer: http://wz.sun0769.com/index.php/question/questionType?type=4&page=0)
+2018-09-23 01:39:52 [scrapy.core.scraper] DEBUG: Scraped from <200 http://wz.sun0769.com/html/question/201809/386779.shtml>
+{'content': '交警部门',
+ 'number': '',
+ 'title': ' 提问：康华医院转宏图路的地方经常有车辆违规跨实线调头\xa0\xa0编号:197235\xa0\xa0',
+ 'url': 'http://wz.sun0769.com/html/question/201809/386779.shtml'}
+2018-09-23 01:39:55 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wz.sun0769.com/html/question/201809/386782.shtml> (referer: http://wz.sun0769.com/index.php/question/questionType?type=4&page=0)
+2018-09-23 01:39:55 [scrapy.core.scraper] DEBUG: Scraped from <200 http://wz.sun0769.com/html/question/201809/386782.shtml>
+{'content': '南城城管部门',
+ 'number': '',
+ 'title': ' 提问：莞太路白马段中间绿化带经常有人穿行，十分危险\xa0\xa0编号:197237\xa0\xa0',
+ 'url': 'http://wz.sun0769.com/html/question/201809/386782.shtml'}
+2018-09-23 01:39:56 [scrapy.extensions.logstats] INFO: Crawled 17 pages (at 17 pages/min), scraped 4 items (at 4 items/min)
+2018-09-23 01:40:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wz.sun0769.com/html/question/201809/386718.shtml> (referer: http://wz.sun0769.com/index.php/question/questionType?type=4&page=0)
+2018-09-23 01:40:00 [scrapy.core.scraper] ERROR: Spider error processing <GET http://wz.sun0769.com/html/question/201809/386718.shtml> (referer: http://wz.sun0769.com/index.php/question/questionType?type=4&page=0)
+Traceback (most recent call last):
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spiders/crawl.py", line 78, in _parse_response
+    for requests_or_item in iterate_spider_output(cb_res):
+  File "/home/tom/Desktop/Test/Tryout/Scrapy/Sun0769/Sun0769/spiders/sunCrawlSpider.py", line 38, in parseform
+    content = response.xpath('//div[@class="c1 text14_2"]/div[@class="contentext"]/text()').extract_first().strip()
+AttributeError: 'NoneType' object has no attribute 'strip'
+2018-09-23 01:40:03 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://wz.sun0769.com/html/question/201809/386719.shtml> (referer: http://wz.sun0769.com/index.php/question/questionType?type=4&page=0)
+2018-09-23 01:40:04 [scrapy.core.scraper] ERROR: Spider error processing <GET http://wz.sun0769.com/html/question/201809/386719.shtml> (referer: http://wz.sun0769.com/index.php/question/questionType?type=4&page=0)
+Traceback (most recent call last):
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/.virtualenvs/py3env/lib/python3.6/site-packages/scrapy/spiders/crawl.py", line 78, in _parse_response
+    for requests_or_item in iterate_spider_output(cb_res):
+  File "/home/tom/Desktop/Test/Tryout/Scrapy/Sun0769/Sun0769/spiders/sunCrawlSpider.py", line 38, in parseform
+    content = response.xpath('//div[@class="c1 text14_2"]/div[@class="contentext"]/text()').extract_first().strip()
+AttributeError: 'NoneType' object has no attribute 'strip'
+2018-09-23 01:40:05 [scrapy.crawler] INFO: Received SIGINT, shutting down gracefully. Send again to force 
+2018-09-23 01:40:05 [scrapy.core.engine] INFO: Closing spider (shutdown)
+2018-09-23 01:40:05 [scrapy.crawler] INFO: Received SIGINT twice, forcing unclean shutdown
